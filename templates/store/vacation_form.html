@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel Shop</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
+    <script type="text/javascript" src="{% static 'jsi18n.js' %}"></script>
+    <script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+
+    <script type="text/javascript" src="{% static 'adminpicker.js' %}"></script>
+    <script type="text/javascript" src="{% static 'calendar.js' %}"></script>
+    <script type="text/javascript" src="{% static 'core.js' %}"></script>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        You Deserve A Vacation!
+      </h1>
+      <form method="post" action="">
+        {% csrf_token %}
+      <div class="field">
+        {{ form.as_p}}
+      </div>
+      <input type="submit" />
+      </form>
+    </div>
+
+
+  </section>
+  </body>
+</html>
